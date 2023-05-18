@@ -13,13 +13,6 @@ Use the following to cite our paper:
 }
 ```
 
-## 1. Installation
-
-Install the required set of libraries.
-```
-pip install -r requirements.txt
-```
-
 ## 🎭 PersonaChatGen
 
 You can now download PersonaChatGen dataset from the [google drive](https://drive.google.com/drive/folders/1-q2ZrnYpVzLB17rm9Net4UOLpE54dSaR?usp=sharing).
@@ -27,12 +20,66 @@ We provide the train and validation sets following the format of the original [P
 
 ## 🤖 How to make PersonaChatGen using GPT-3?
 
-To construct the PersonaChatGen dataset using GPT-3, we propose a pipeline consisting of three stages: (1) ProflieGen creation, (2) Persona Set creation, and (3) PersonaChatGen creation. The detailed information is in our paper. Please follow the below instruction step-by-step.
+To construct the PersonaChatGen dataset using GPT-3, we propose a pipeline consisting of three stages: (1) ProflieGen Creation, (2) Persona Set Creation, and (3) PersonaChatGen Creation. The detailed information is in our paper. Please follow the below instruction step-by-step.
 
-### ProfileGen creation
+### Preparation
 
-- Generating 
+#### Installation
 
+Install the required set of libraries as follows:
+```
+pip install -r requirements.txt
+```
+
+#### Set up OpenAI API Key
+
+Set up the OpenAI API Key in the function of `get_response()` in `prompt_generator.py` as follows:
+
+```python
+openai.api_key = "<API_KEY>"
+openai.organization = "<ORG_ID>"
+```
+
+### ProfileGen Creation
+
+#### Generation
+Run the command below to generate various profile-related sentences using GPT-3.
+
+```python
+python profile_main.py
+```
+
+#### Filtering
+Run the command below to filter low-quality sentences based on regex-based filtering, exact matching persona entity, preserving persona category, and duplication filtering.
+
+```python
+python profile_filtering.py
+```
+
+### Persona Set Creation
+
+Run the command below to create persona sets using our proposed simple algorithm, namely CoNL (Contradiction-based Iterative Sentence Replacement).
+> 🚨 Please note that this algorithm and the accompanying implementation can take a significant amount of time to create numerous persona sets. We encourage other contributors to improve it for greater efficiency.
+
+```python
+python conl_main.py
+```
+
+### PersonaChatGen Creation
+
+#### Generation
+Run the command below to generate PersonaChatGen dataset using GPT-3.
+
+```python
+python chat_main.py
+```
+
+#### Filtering
+Run the command below to filter low-quality dialogues based on copy-paste, persona consistency, toxicity filtering.
+
+```python
+python chat_filtering.py
+```
 
 ## Have any question?
 
