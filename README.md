@@ -81,7 +81,14 @@ Run the command below to filter low-quality dialogues based on copy-paste, perso
 python chat_filtering.py
 ```
 
+## Acknowledgements
+
+This work was supported by the KT Corporation. We thank all KT researchers for helpful discussions.
+
 ## Have any question?
 
 Please contact [Young-Jun Lee](https://sites.google.com/view/passing2961/%ED%99%88) at yj2961@kaist.ac.kr or passing2961@gmail.com.
 
+## License
+
+This repository is MIT licensed. See the [LICENSE](https://github.com/passing2961/PersonaChatGen/blob/main/LICENSE) file for details.
