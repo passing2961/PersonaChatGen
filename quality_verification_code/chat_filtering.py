@@ -34,8 +34,6 @@ class ChatPipeline(object):
         self.pair_conversations = []
         #self.make_pair_conversations()
 
-        self.API_KEY = 'AIzaSyC5tstKNGQIKF8XnmtFiAdZIjVg7xufiSo'
-
     def make_pair_conversations(self, conversations):
         
         for conv_idx, conversation in enumerate(conversations):
@@ -191,7 +189,7 @@ if __name__ == '__main__':
 
     toxic_clf = Detoxify('original')
     
-    root_dir = args.personachatgen_dir # '/home/yjlee/workspace/KT/emnlp2022/code/dataset_generator_code/result/parlai_chat/all_final'
+    root_dir = args.personachatgen_dir
     file_save_dir = args.file_save_dir
     os.makedirs(file_save_dir, exist_ok=True)
 

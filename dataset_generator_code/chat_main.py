@@ -34,7 +34,7 @@ if __name__ == '__main__':
     args = parse_args()
 
     total_persona_set = []
-    personaset_save_dir = args.persona_set_dir #'/home/yjlee/workspace/KT/emnlp2022/code/dataset_generator_code/result/persona_set/new_wellness_v2'
+    personaset_save_dir = args.persona_set_dir
     for ele in os.listdir(personaset_save_dir):
         if '.pkl' not in ele:
             continue
@@ -52,14 +52,14 @@ if __name__ == '__main__':
 
     # load persona chat dataset
     # sampling persona chat dataset
-    personachat_data_dir = args.personachat_dir #f'/home/yjlee/workspace/KT/data/annotated_data/personachat:both_original/train.jsonl'
+    personachat_data_dir = args.personachat_dir
     with open(personachat_data_dir, 'r') as f:
         personachat_data = [json.loads(line.strip()) for line in f.readlines()]
     
     personachat = organize_personachat(personachat_data)
     origin_data_fullsize = len(personachat.keys())
 
-    generations_save_dir = args.generation_save_dir #f'./result/chat/new_wellness'
+    generations_save_dir = args.generation_save_dir
     os.makedirs(generations_save_dir, exist_ok=True)
 
     chat_generator = ChatPromptGenerator(total_persona_set, personachat)
