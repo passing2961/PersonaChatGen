@@ -20,4 +20,21 @@ Install the required set of libraries.
 pip install -r requirements.txt
 ```
 
-## PersonaChatGen
+## 🎭 PersonaChatGen
+
+You can now download PersonaChatGen dataset from the [google drive](https://drive.google.com/drive/folders/1-q2ZrnYpVzLB17rm9Net4UOLpE54dSaR?usp=sharing).
+We provide the train and validation sets following the format of the original [PersonaChat](https://arxiv.org/abs/1801.07243) dataset, as provided by the [ParlAI](https://github.com/facebookresearch/ParlAI/tree/main/parlai/tasks/personachat) framework.
+
+## 🤖 How to make PersonaChatGen using GPT-3?
+
+To construct the PersonaChatGen dataset using GPT-3, we propose a pipeline consisting of three stages: (1) ProflieGen creation, (2) Persona Set creation, and (3) PersonaChatGen creation. The detailed information is in our paper. Please follow the below instruction step-by-step.
+
+### ProfileGen creation
+
+- Generating 
+
+
+## Have any question?
+
+Please contact [Young-Jun Lee](https://sites.google.com/view/passing2961/%ED%99%88) at yj2961@kaist.ac.kr or passing2961@gmail.com.
+
