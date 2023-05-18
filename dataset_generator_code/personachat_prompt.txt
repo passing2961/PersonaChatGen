@@ -1,0 +1,10 @@
+### Persona:
+{FEWSHOT_PERSONA}
+
+The following is a daily conversation with your friend implicitly containing the given persona.
+{FEWSHOT_CONV}
+
+### Persona:
+{TARGET_PERSONA}
+
+The following is a daily conversation with your friend implicitly containing the given persona.
