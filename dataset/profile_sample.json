@@ -1,0 +1,20 @@
+[
+	{
+		"sentence": "I love reading books by J.D. Salinger.",
+		"attr": "author",
+		"value": "J.D. Salinger",
+		"nli_score": 0.9965597987174988
+	},
+	{
+		"sentence": "I am a big fan of Stephen King's work.",
+		"attr": "author",
+		"value": "Stephen King",
+		"nli_score": 0.9954316020011902
+	},
+	{
+		"sentence": "I enjoy reading books by J.K. Rowling.",
+		"attr": "author",
+		"value": "J.K. Rowling",
+		"nli_score": 0.9974457025527954
+	}
+]
