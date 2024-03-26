@@ -6,6 +6,7 @@
 
 📜 [**Slide**](https://drive.google.com/file/d/1FCtRyoxySbeHORUt9brhhzhVrULzAlZ3/view?usp=share_link)
 
+**🏆 PersonaChatGen won the Best Paper Award at CCGPK@COLING 2022!**
 
 ## Reference
 Use the following to cite our paper:
